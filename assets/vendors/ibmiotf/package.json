@@ -1,0 +1,133 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "ibmiotf",
+        "scope": null,
+        "escapedName": "ibmiotf",
+        "name": "ibmiotf",
+        "rawSpec": "",
+        "spec": "latest",
+        "type": "tag"
+      },
+      "C:\\Users\\hongo\\OneDrive\\DoAnTotNghiep\\hethongdieukhien_client"
+    ]
+  ],
+  "_from": "ibmiotf@latest",
+  "_id": "ibmiotf@0.2.34",
+  "_inCache": true,
+  "_location": "/ibmiotf",
+  "_nodeVersion": "6.2.2",
+  "_npmOperationalInternal": {
+    "host": "packages-12-west.internal.npmjs.com",
+    "tmp": "tmp/ibmiotf-0.2.34.tgz_1491206158300_0.9427052608225495"
+  },
+  "_npmUser": {
+    "name": "jeffdare",
+    "email": "jeffdare@in.ibm.com"
+  },
+  "_npmVersion": "3.9.5",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "ibmiotf",
+    "scope": null,
+    "escapedName": "ibmiotf",
+    "name": "ibmiotf",
+    "rawSpec": "",
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "https://registry.npmjs.org/ibmiotf/-/ibmiotf-0.2.34.tgz",
+  "_shasum": "400707356939691b3203a7fc776bfcd5015b1b1d",
+  "_shrinkwrap": null,
+  "_spec": "ibmiotf",
+  "_where": "C:\\Users\\hongo\\OneDrive\\DoAnTotNghiep\\hethongdieukhien_client",
+  "author": {
+    "name": "Jeffrey Dare",
+    "email": "jeffdare@in.ibm.com"
+  },
+  "bugs": {
+    "url": "https://github.com/ibm-watson-iot/iot-nodejs/issues"
+  },
+  "contributors": [
+    {
+      "name": "Tim Jacobi",
+      "email": "tim.jacobi@uk.ibm.com"
+    },
+    {
+      "name": "Amit M Mangalvedkar",
+      "email": "amitmangalvedkar@in.ibm.com"
+    },
+    {
+      "name": "Lokesh K Haralakatta",
+      "email": "lokesh.h.k@in.ibm.com"
+    }
+  ],
+  "dependencies": {
+    "axios": "^0.5.4",
+    "bluebird": "^2.9.34",
+    "btoa": "^1.1.2",
+    "events": "^1.0.2",
+    "format": "^0.2.1",
+    "loglevel": "1.4.0",
+    "mqtt": "1.5.0"
+  },
+  "description": "A library for developing device and application clients for IBM Watson IoT Platform",
+  "devDependencies": {
+    "babel": "^5.8.21",
+    "babelify": "^6.1.3",
+    "browserify": "^11.0.1",
+    "chai": "^3.2.0",
+    "cpx": "latest",
+    "mocha": "^2.2.5",
+    "rimraf": "latest",
+    "sinon": "^1.16.1",
+    "uglify-js": "latest"
+  },
+  "directories": {},
+  "dist": {
+    "shasum": "400707356939691b3203a7fc776bfcd5015b1b1d",
+    "tarball": "https://registry.npmjs.org/ibmiotf/-/ibmiotf-0.2.34.tgz"
+  },
+  "gitHead": "dfeaf2eb96647cd9d5a7a64c174f7e77183bf27e",
+  "homepage": "https://github.com/ibm-watson-iot/iot-nodejs#readme",
+  "license": "EPL-1.0",
+  "main": "dist/iotf-client.js",
+  "maintainers": [
+    {
+      "name": "amitmangalvedkar",
+      "email": "amitmangalvedkar@gmail.com"
+    },
+    {
+      "name": "jeffdare",
+      "email": "jeffdare@in.ibm.com"
+    },
+    {
+      "name": "lokesh.h.k",
+      "email": "lokesh.h.k@in.ibm.com"
+    }
+  ],
+  "name": "ibmiotf",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ibm-watson-iot/iot-nodejs.git"
+  },
+  "scripts": {
+    "build": "npm run clean && npm run build:commonjs && npm run build:bundle && npm run build:min",
+    "build:bundle": "browserify src/iotf-client.js -t babelify -s IBMIoTF --outfile dist/iotf-client-bundle.js",
+    "build:commonjs": "babel src --out-dir dist --modules umd",
+    "build:min": "browserify src/iotf-client.js -t babelify -s IBMIoTF | uglifyjs > dist/iotf-client-bundle.min.js",
+    "clean": "rimraf dist/*",
+    "postbuild": "cpx src/clients/IoTFoundation.pem dist/util",
+    "prepublish": "npm run build",
+    "pretest": "cpx src/clients/IoTFoundation.pem . && cpx src/clients/IoTFoundation.pem src/util",
+    "test": "mocha --compilers js:babel/register",
+    "test:watch": "mocha --compilers js:babel/register --watch"
+  },
+  "version": "0.2.34"
+}

@@ -1,0 +1,9 @@
+<div>
+    <input data-toggle="dropdown" class="form-control dropdown-toggle" ng-model="searchText" type="search" ng-keyup="onKeyUpSearch(this)"
+        ng-change="onChange(this)">
+    <ul class="dropdown-menu" role="menu" style="width: 100% ;padding-right: 30px;padding-left: 30px; cursor: pointer">
+        <li class="item" ng-repeat="address in addresses track by $index" ng-click="chooseAddress($index)">
+            {{address.description}}
+        </li>
+    </ul>
+</div>

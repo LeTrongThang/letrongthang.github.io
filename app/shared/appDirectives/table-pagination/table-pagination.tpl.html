@@ -1,0 +1,21 @@
+<div ng-if="vm.DataTable.items[0]">
+    <div class="col-md-6">
+        <div class="pagination-panel">View &nbsp;
+            <select class="form-control input-xsmall input-sm input-inline" ng-options="item as item.value for item in vm.listRow track by item.key"
+                ng-model="vm.rowCurrent" ng-change="vm.actionSearch()"></select>&nbsp; records | Found total {{vm.DataTable.totalItems}}
+            records
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="pagination-panel">
+            <uib-pagination total-items="vm.DataTable.totalItems" ng-model="vm.page" items-per-page="vm.rowCurrent.value" ng-change="vm.actionSearch()"
+                max-size="5" boundary-links="true" class="pagination-sm pull-right" previous-text="&lsaquo;"
+                next-text="&rsaquo;" first-text="&laquo;" last-text="&raquo;"></uib-pagination>
+        </div>
+    </div>
+</div>
+<div ng-if="!vm.DataTable.items[0]">
+    <div class="col-md-6">
+        <span class="text-danger notification-not-found">No Results!</span>
+    </div>
+</div>

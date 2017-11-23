@@ -1,0 +1,30 @@
+$primary-color: #00AB9E !default;
+$secondary-color: #ffc82c !default;
+
+$primary-dark-color: #03847d !default;
+$secondary-dark-color: #e5ae25 !default;
+
+$nav-bar-color: #f8f8f8;
+$nav-bar-icon-color: #4a4a4a;
+$nav-bar-title-color: #545454;
+
+$input-border-color: #cfcfcf;
+
+$background-color: #eeeeee;
+
+$normal-text-color: #929292;
+$color-grey: #CCCCCC;
+$color-blue: #0e81ff;
+
+$tabs-height: 34px;
+$has-tabs-top: $tabs-height + 44px; //44px is height of header
+
+$refresh-jobs-height: 34px;
+
+.primary-color {
+    color: $primary-color;
+}
+
+.secondary-color {
+    color: $secondary-color;
+}

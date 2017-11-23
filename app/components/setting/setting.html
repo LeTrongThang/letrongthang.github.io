@@ -1,0 +1,96 @@
+<div class="row">
+    <div class="col-md-12">
+        <div> {{vm.connected1?'Đã kết nối' : 'Đang kết nối'}}
+        </div>
+        <div ng-show="!vm.connected1 || vm.wait1" class="loader" aria-hidden="true"></div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <strong ng-show="vm.wait1">Vui lòng chờ...</strong>
+        <br>
+        <div>
+            <div class="panel panel-green">
+                <div class="panel-heading">KHU VỰC 1</div>
+                <div class="panel-body pan">
+                    <form class="form-horizontal ng-pristine ng-valid form-validate">
+                        <div class="form-body pal">
+                            <span>Cài đặt thông số</span>
+                            <table class="table table-hover table-striped table-bordered table-advanced tablesorter">
+                                <thead>
+                                    <tr>
+                                        <th>LOẠI CÂY</th>
+                                        <th>NHIỆT ĐỘ CAO NHẤT</th>
+                                        <th>NHIỆT ĐỘ THẤP NHẤT</th>
+                                        <th>ĐỘ ẨM CAO NHẤT</th>
+                                        <th>ĐỘ ẨM THẤP NHẤT</th>
+                                    </tr>
+                                    <tbody>
+                                        <td> <select style="width:100%" id="extra-service" lang="en" class="form-control" ng-model="vm.item1"
+                                               ng-change="vm.zone1Change(vm.item1)" ng-options="et as et.type for et in vm.zone1 track by et.type"></select></td>
+                                        <td><input type="number" ng-model="vm.item1.highTemp " /></td>
+                                        <td><input type="number" ng-model="vm.item1.lowTemp " /></td>
+                                        <td><input type="number" ng-model="vm.item1.highHud " /></td>
+                                        <td><input type="number" ng-model="vm.item1.lowHud " /></td>
+                                    </tbody>
+                                </thead>
+                            </table>
+                            <button class="btn btn-success " ng-click="vm.send(1) ">Gửi</button>
+                        </div>
+                        <div class="form-action ">
+                            <div class="col-md-offset-3 col-md-9 ">
+
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div> {{vm.connected2?'Đã kết nối' : 'Đang kết nối'}}
+            </div>
+            <div ng-show="!vm.connected2 || vm.wait2 " class="loader " aria-hidden="true "></div>
+            <br>
+            <br>
+            <br>
+            <br>
+            <strong ng-show="vm.wait2 ">Vui lòng chờ...</strong>
+            <br>
+            <div class="panel panel-green ">
+                <div class="panel-heading ">KHU VỰC 2</div>
+                <div class="panel-body pan ">
+                    <form class="form-horizontal ng-pristine ng-valid form-validate ">
+                        <div class="form-body pal ">
+                            <table class="table table-hover table-striped table-bordered table-advanced tablesorter">
+                                <thead>
+                                    <tr>
+                                        <th>LOẠI CÂY</th>
+                                        <th>NHIỆT ĐỘ CAO NHẤT</th>
+                                        <th>NHIỆT ĐỘ THẤP NHẤT</th>
+                                        <th>ĐỘ ẨM CAO NHẤT</th>
+                                        <th>ĐỘ ẨM THẤP NHẤT</th>
+                                    </tr>
+                                    <tbody>
+                                        <tr>
+                                            <td> <select style="width:100%" id="extra-service" lang="en" class="form-control"
+                                             ng-change="vm.zone2Change(vm.item2)"
+                                                    ng-model="vm.item2" ng-options="et as et.type for et in vm.zone2 track by et.type"></select></td>
+                                            <td><input type="number" ng-model="vm.item2.highTemp " /></td>
+                                            <td><input type="number" ng-model="vm.item2.lowTemp " /></td>
+                                            <td><input type="number" ng-model="vm.item2.highHud " /></td>
+                                            <td><input type="number" ng-model="vm.item2.lowHud " /></td>
+                                        </tr>
+                                    </tbody>
+                                </thead>
+                            </table>
+                            <button class="btn btn-success " ng-click="vm.send(2) ">Gửi</button>
+                        </div>
+                        <div class="form-action ">
+                            <div class="col-md-offset-3 col-md-9 ">
+
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>

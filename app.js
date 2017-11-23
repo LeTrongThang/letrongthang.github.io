@@ -1,33 +1,107 @@
-var CORRECT_USER = 'admin';
-var CORRECT_PASS = 'admin';
+(function () {
+    "use strict";
 
-var inputUsername = document.getElementById('username');
-var inputPassword = document.getElementById('password');
+    angular.module('app', [
+        'ui.router',
+        'ngStorage',
+        'ui.bootstrap',
+        'ncy-angular-breadcrumb',
+        'restangular',
+        'app.themeDirectives',
+        'app.services',
+        'app.appDirectives',
+        'app.filters',
+        'app.components'
+    ]);
+})();
+(function () {
+    "use strict";
 
-var formLogin = document.getElementById('form-login');
+    angular.module('app')
+        .config(function ($stateProvider, $urlRouterProvider, $locationProvider, $httpProvider, RestangularProvider, appConfigs) {
 
-if(formLogin.attachEvent) {
-    formLogin.attachEvent('submit', onFormSubmit);
-} else {
-    formLogin.addEventListener('submit', onFormSubmit);
-}
+            RestangularProvider.setBaseUrl(appConfigs.API.BASE_URL);
+            $httpProvider.interceptors.push('httpInterceptor');
+            $urlRouterProvider
+                .otherwise(function ($injector) {
+                    var $state = $injector.get('$state');
+                    $state.go('index.control');
+                })
+        });
 
+})();
+(function () {
+    "use strict";
 
-function onFormSubmit(e) {
-    if(e.preventDefault) e.preventDefault();
+    angular.module('app')
+        .run(function ($rootScope, $state, appConfigs, $localStorage, $sessionStorage) {
+            $rootScope.$on('$stateChangeStart', function (event, toState, toParams, fromState, fromParams) {
+                if (fromState.name != toState.name && toState.name != 'login') {
+                    if (!$localStorage.accessToken) {
+                        $state.go('login');
+                        event.preventDefault();
+                        return;
+                    }
+                }
+                if (toState.redirectTo) {
+                    $state.go(toState.redirectTo, toParams);
+                    event.preventDefault();
+                }
+            });
+            $rootScope.appConfigs = appConfigs;
+        })
+        .factory('WatsonIoT', function () {
+            return IBMIoTF.IotfApplication;
+        });
+})();
+(function () {
+    "use strict";
 
-    var username = inputUsername.value;
-    var password = inputPassword.value;
+    angular.module('app')
+        .constant('appConfigs', {
+            API: {
+                BASE_URL: "http://localhost:3000/api/v1/",
+                SERVER_URL: "http://localhost:3000",
+                USER: {
+                    BASE: "user/",
+                    CUSTOMER: "customer/",
+                    DRIVER: "driver/"
+                },
+                ADMIN: {
+                    BASE: "admin/",
+                    ORDER: "orders/"
+                },
+                ORDER: {
+                    BASE: "orders/",
+                    CANCEL: "cancel/",
+                    GET_ESTIMATION: "order-estimation/",
+                },
+                EXTRA_SERVICE: {
+                    BASE: "extra_service/"
+                },
+                FEEDBACK: {
+                    BASE: "feedback/"
+                },
+                AUTH: {
+                    BASE: 'auth/',
+                    LOGIN: 'login-admin/',
+                    VALIDATE_TOKEN: "validate-access-token/",
+                    REFRESH_TOKEN: "refresh-token/"
+                },
+                GLOBAL_SETTINGS: {
+                    BASE: "global-settings/",
+                    LOGIN_KEY: "login-key/"
+                }
+            },
 
-    if(username == CORRECT_USER && password == CORRECT_PASS) {
-        window.location = 'https://www.facebook.com/lethang.plth';
-    } else {
-        var divErrors = document.getElementById('errors');
-        divErrors.innerHTML =   '<div class="alert alert-danger">' +
-                                    '<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>' +
-                                    '<strong>Có lỗi xảy ra:</strong> Tên đăng nhập hoặc mật khẩu không đúng!' +
-                                '</div>';
-    }
+            paginationMaxPage: 5,
 
-    return false;
-}
+            listRow: [
+                { key: 20, value: '20' },
+                { key: 40, value: '40' },
+                { key: 60, value: '60' },
+                { key: 0, value: 'All' }
+            ]
+        });
+
+})();

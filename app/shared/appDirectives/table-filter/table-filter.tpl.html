@@ -1,0 +1,15 @@
+<div class="input-group input-group-sm mbs">
+    <span class="input-group-btn">
+              <button type="button" data-toggle="dropdown" class="btn btn-danger dropdown-toggle">{{vm.filter.translate|translate}}&nbsp;
+                  <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu">
+        <li ng-repeat="filter in vm.listStatus">
+            <a ng-click="vm.actionSearch()">{{filter.translate|translate}}</a>
+    </ul>
+    </span>
+    <input type="search" class="form-control input-sm" placeholder="" aria-controls="table_id" ng-model="vm.textSearch" ng-enter="vm.actionSearch()">
+    <span class="input-group-btn">
+              <button type="button" data-toggle="dropdown" class="btn btn-success dropdown-toggle" ng-click="vm.actionSearch()">{{"DATA_TABLE.SEARCH"|translate}}</button>
+            </span>
+</div>

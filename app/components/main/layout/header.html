@@ -1,0 +1,26 @@
+<nav id="topbar" role="navigation" style="margin-bottom: 0;" data-step="1" data-intro="&lt;b&gt;Topbar&lt;/b&gt; has other styles with live demo. Go to &lt;b&gt;Layouts-&gt;Header&amp;Topbar&lt;/b&gt; and check it out."
+    class="navbar navbar-default navbar-static-top">
+    <div class="navbar-header">
+        <a id="logo" href="/#/" class="navbar-brand">
+            <span class="fa fa-rocket"></span>
+            <span class="logo-text">HỆ THỐNG GIÁM SÁT - ĐIỀU KHIỂN TRONG HỆ THỐNG IOT NÔNG NGHIỆP</span>
+            <span style="display: none" class="logo-text-icon"></span></a>
+    </div>
+    <div class="topbar-main">
+        <a id="menu-toggle" class="hidden-collapse" ng-click="header.collapse('k')"><i
+                class="fa fa-bars"></i></a>
+
+        <ul class="nav navbar navbar-top-links navbar-right mbn">
+            <li dropdown class="topbar-user pull-right">
+                <a data-hover="dropdown" dropdown-toggle>
+                    <img ng-src="{{vm.myInfor.avatar.url_thumb? appConfigs.baseUrl + vm.myInfor.avatar.url_thumb : './assets/images/avatar.png'}}" alt="" class="img-responsive img-circle" />&nbsp;
+                    <span>Admin</span>&nbsp;<span class="caret"></span></a>
+                <ul class="dropdown-menu dropdown-user pull-right">
+                    <li><a ui-sref="index.profile"><i class="fa fa-user"></i></a></li>
+                    <!--<li class="divider"></li>-->
+                    <li><a ng-click="vm.logOut()"><i class="fa fa-key"></i>Đăng xuất</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</nav>

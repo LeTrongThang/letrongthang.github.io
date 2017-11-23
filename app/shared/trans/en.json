@@ -1,0 +1,262 @@
+{
+	"HOME": "Home",
+	"REMEMBER_ME": "Remember me",
+	"LOG_IN": "Log in",
+	"USERNAME_OR_EMAIL": "Username or Email",
+	"EMAIL": "Email",
+	"USERNAME": "Username",
+	"PASSWORD": "Password",
+	"FORGOTTEN_PASSWORD": "Forgotten your password",
+	"LINK_RESET_PASSWORD": {
+		"1": "no worries, click",
+		"2": "here",
+		"3": "to reset your password"
+	},
+	"DISPLAY_NAME": "Display name",
+	"DESCRIPTION": "Description",
+	"ADDRESS": "Address",
+	"STATUS": "Status",
+	"EDIT_PROFILE": "Edit Profile",
+	"SAVE": "Save",
+	"CANCEL": "Cancel",
+	"PHONE_NUMBER": "Phone Number",
+	"CHANGE_PASSWORD": "Change Password",
+	"CURRENT_PASSWORD": "Current Password",
+	"NEW_PASSWORD": "New Password",
+	"CONFIRM_PASSWORD": "Confirm Password",
+	"PASSWORD_NOT_MATCH": "New password and Confirm password not match",
+	"UPDATE_SUCCESSFUL": "Update Successful",
+	"SIDEBAR": {
+		"DASHBOARD": "Dashboard",
+		"ACCOUNTS": {
+			"BASE": "Accounts",
+			"CUSTOMER": "Customers"
+		},
+		"FEEDBACK": "Feedbacks",
+		"ORDERS": "Jobs",
+		"EXTRA_SERVICE": "Extra Services"
+	},
+	"EMAIL_REQUIRED": "Email is required",
+	"EMAIL_INVALID": "Email invalid",
+	"PASSWORD_REQUIRED": "Password is required",
+	"CUSTOMER": {
+		"PAGE": {
+			"LIST": {
+				"TITLE": "Customers",
+				"CUSTOMER_ID": "Customer Id",
+				"NAME": "Name",
+				"TELEPHONE": "Telephone",
+				"EMAIL": "Email",
+				"DATE_REGISTERED": "Date Registered",
+				"LAST_LOGIN": "Last Login",
+				"BLOCKED": "Blocked",
+				"NOTES": "Notes",
+				"ACTION": "Action"
+			},
+			"DETAIL": {
+				"TITLE": "Customer Detail"
+			}
+		}
+	},
+	"DATA_TABLE": {
+		"VIEW": "View",
+		"SEARCH": "Search",
+		"ACTIVE": "Active",
+		"DELETE": "Delete",
+		"CANCEL": "Cancel",
+		"ADD": "Add",
+		"DETAIL": "Detail"
+	},
+	"DRIVER": {
+		"PAGE": {
+			"LIST": "Drivers",
+			"DETAIL": {
+				"TITLE": "Driver Details",
+				"DRIVER_ID": "Driver ID",
+				"ACTIVATED": "Activated",
+				"COMPANY": "Company",
+				"FIRST_NAME": "First Name",
+				"LAST_NAME": "Last Name",
+				"DATE_OF_BIRTH": "Date of Birth",
+				"TELEPHONE": "Telephone",
+				"EMAIL": "Email",
+				"EMAIL_VERIFIED": "Email Verified",
+				"ADDRESS_1": "Address 1",
+				"ADDRESS_2": "Address 2",
+				"CITY": "City",
+				"POST_CODE": "Post Code",
+				"NATIONALITY": "Nationality",
+				"NI": "NI",
+				"PASSWORD": "Password"
+			},
+			"DRIVER_DOCUMENTS": {
+				"TITLE": "Driver Documents",
+				"DRIVER_LICENCE_FRONT": "Driver Licence Front",
+				"DRIVER_LICENCE_BACK": "Driver Licence Back",
+				"DRIVER_LICENCE_NUMBER": "Driver Licence Number",
+				"DRIVING_LICENCE_EXPIRY_DATE": "Driving Licence Expiry Date",
+				"LOG_BOOK_PHOTO": "Log Book Photo",
+				"LOG_BOOK_NUMBER": "Log Book Number",
+				"VAN_INSURANCE": "Van Insurance",
+				"VAN_INSURANCE_EXPIRY_DATE": "Van Insurance Expired Date",
+				"MOT_PHOTO": "MOT Photo",
+				"MOT_EXPIRY_DATE": "MOT Expiry Date",
+				"ROAD_TAX_INFORMATION": "Road Tax Infomation",
+				"ROAD_TAX_EXPIRY": "Road Tax Expiry",
+				"PASSPORT_PHOTO": "Passport Photo",
+				"PASSPORT_NUMBER": "Passport Number",
+				"PASSPORT_EXPIRY": "Passport Expiry",
+				"LIABILITY_INSURANCE": "Liability Insurance",
+				"LIABILITY_NOTES": "Liability Notes",
+				"OTHER": "Other",
+				"DRIVER_NOTES": "Driver Notes"
+			},
+			"VAN_DETAILS": {
+				"TITLE": "Van Details",
+				"CAR_REGISTRATION": "Car Registration",
+				"YEAR": "Year",
+				"VAN_PHOTO": "Van Photo",
+				"VAN_TYPE": "Van Type",
+				"MAKE_MODEL": "Make / Model",
+				"OWNED_RENT": "Owned / Rent",
+				"VAN_EQUIPMENTS": "Van Equipments"
+			},
+			"BANK_DETAILS": {
+				"TITLE": "Bank Details",
+				"BANK_NAME": "Bank Name",
+				"SORT_CODE": "Sort Code",
+				"ACCOUNT_NUMBER": "Account Number",
+				"NOTES": "Notes"
+			}
+		},
+		"ACTIVED": "Actived",
+		"COMPANY": "Company",
+		"FIRST_NAME": "First Name",
+		"LAST_NAME": "Last Name",
+		"DATE_OF_BIRTH": "Date of Birth",
+		"TELEPHONE": "Telephone",
+		"EMAIL": "Email",
+		"ADDRESS": "Address",
+		"POSTCODE": "Postcode",
+		"NATIONALITY": "Nationality",
+		"NI": "NI",
+		"LAST_ACTIVE": "Last Active",
+		"MAP": "Map",
+		"FEEDBACK": "Feedback",
+		"DRIVER_NOTES": "Driver Notes",
+		"NATION": "Nation"
+	},
+	"ORDER": {
+		"PAGE": {
+			"LIST": {
+				"TITLE": "Jobs",
+				"ORDER_ID": "Order Id",
+				"DETAILS": "Details",
+				"ACTION": "Action",
+				"CREATED": "Created",
+				"CUSTOMER": "Customer",
+				"ADDRESS_FROM": "Address From",
+				"ADDRESS_TO": "Address To",
+				"TYPE": "Type",
+				"DISPUTED": "Disputed",
+				"STATUS": "Status",
+				"DATE_ORDERED": "Date Ordered/Time",
+				"PICKUP_DATE": "Pickup Date/Time",
+				"FINAL_AMOUNT": "Final Amount",
+				"MAP": "Map",
+				"CUSTOMER_PAYMENT_COMPLETED": "Customer Payment Completed Date",
+				"PAYMENT_STATUS": "Payment Status",
+				"PAYMENT_RECEIVED": "Payment Received",
+				"DRIVER": "Driver",
+				"VEHICLE": "Vehicle",
+				"NOTES": "Notes",
+				"EXTRAS_SERVICES": "Extra Services",
+				"PAYMENT_STATUS_NAME": {
+					"VOIDED": "Voided",
+					"COMPLETED": "Completed",
+					"PREAUTHORISED": "Preauthorised",
+					"FAILED": "Failed"
+				}
+			},
+			"DETAIL": {
+				"TITLE": "Order Details",
+				"HISTORY": "Order History",
+				"ORDER_ID": "Order Id",
+				"CUSTOMER": "Customer",
+				"ADDRESS_FROM": "Address From",
+				"ADDRESS_TO": "Address To",
+				"TYPE": "Type",
+				"STATUS": "Status",
+				"DISPUTED": "Disputed",
+				"DATE_ORDERED": "Date Ordered/Time",
+				"PICKUP_DATE": "Pickup Date/Time",
+				"FINAL_AMOUNT": "Final Amount",
+				"CUSTOMER_PAYMENT_RECEIVED": "Customer Payment Received",
+				"REFUNDED": "Refunded",
+				"DRIVER": "Driver",
+				"VAN_TYPE": "Van Type",
+				"VEHICLE": "Vehicle",
+				"NOTES": "Notes",
+				"EXTRAS_SERVICES": "Extra Services",
+				"CANCEL_ORDER": "Cancel Order",
+				"DATE_TIME": "Date Time",
+				"STATUS_NAME": {
+					"NEW": "Order Created",
+					"AUTHORISED": "Payment Received",
+					"CONFIRMED": "Driver Confirmed",
+					"CANCELLED": "Order Cancelled",
+					"DRIVING_PICKUP": "Driver Driving To Pick Up",
+					"ARRIVED_PICKUP": "Driver Pickuped Up",
+					"DRIVING_DROPOFF": "Driving To Destination",
+					"ARRIVED_DROPOFF": "Driver Arrived Destination",
+					"COMPLETED": "Order Completed",
+					"CLOSED": "Order Closed"
+				},
+				"DETAILS": "Details",
+				"ADDRESS_FROM_REQUIRED": "Address from is required.",
+				"ADDRESS_TO_REQUIRED": "Address to is required.",
+				"FINAL_AMOUNT_REQUIRED": "Final amount is required."
+			}
+		}
+	},
+	"EXTRA_SERVICE": {
+		"PAGE": {
+			"LIST": {
+				"TITLE": "Extra Services",
+				"EXTRAS_SERVICE_ID": "Id",
+				"NAME": "Name",
+				"PRICE": "Price",
+				"CURRENCY": "Currency",
+				"ENABLED": "Enabled",
+				"CREATED": "Created",
+				"MODIFIED": "Modified",
+				"NOTE": "Note",
+				"ACTION": "Action",
+				"EDIT": "Edit",
+				"ADD": "Add New"
+			},
+			"DETAIL": {
+				"TITLE": " Edit Extra Service",
+				"CREATE": "Create Extra Service",
+				"EXTRA_SERVICE_ID": "Id",
+				"NAME": "Name",
+				"PRICE": "Price",
+				"CURRENCY": "Currency",
+				"ENABLED": "Enabled",
+				"CREATED": "Created",
+				"MODIFIED": "Modified",
+				"NOTE": "Note",
+				"NAME_REQUIRE": "Name is require.",
+				"PRICE_REQUIRE": "Price is require."
+			}
+		}
+	},
+	"FEEDBACK": {
+		"PAGE": {
+			"LIST_OF_DRIVER": {
+				"TITLE": "Feedback - For Specific Driver"
+			}
+		}
+	},
+	"BACK": "Back"
+}

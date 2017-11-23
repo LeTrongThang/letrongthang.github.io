@@ -1,0 +1,11 @@
+.pagination > li {
+    outline: none;
+}
+
+.display-flex {
+    @include display-flex();
+}
+
+.dataTables_length {
+    line-height: 32px;
+}

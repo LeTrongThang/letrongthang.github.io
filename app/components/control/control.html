@@ -1,0 +1,158 @@
+<div class="row">
+    <div class="col-md-12">
+        <div> {{vm.connected1?'Đã kết nối' : 'Đang kết nối'}}
+        </div>
+        <div ng-show="!vm.connected1 || vm.wait1" class="loader" aria-hidden="true"></div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <strong ng-show="vm.wait1">Vui lòng chờ...</strong>
+        <br>
+        <div>
+            <div class="panel panel-green">
+                <div class="panel-heading">KHU VỰC 1</div>
+                <div class="panel-body pan">
+                    <form class="form-horizontal ng-pristine ng-valid form-validate">
+                        <div class="form-body pal">
+                            <table class="table table-hover table-striped table-bordered table-advanced tablesorter">
+                                <thead>
+                                    <tr>
+                                        <th>NHIỆT ĐỘ</th>
+                                        <th>ĐỘ ẨM</th>
+                                        <th>ĐỘ ẨM ĐẤT</th>
+                                    </tr>
+                                    <tbody>
+                                        <tr>
+                                            <td>{{vm.zone_1[0]}}</td>
+                                            <td>{{vm.zone_1[1]}}</td>
+                                            <td>{{vm.zone_1[2]}}</td>
+                                        </tr>
+                                    </tbody>
+                                </thead>
+                            </table>
+                            <table class="table table-hover table-striped table-bordered table-advanced tablesorter">
+                                <thead>
+                                    <tr>
+                                        <th>TỰ ĐỘNG / BẰNG TAY </th>
+                                        <th ng-class="vm.manual_1?'enable':''">ĐÈN</th>
+                                        <th ng-class="vm.manual_1?'enable':''">BƠM</th>
+                                        <th ng-class="vm.manual_1?'enable':''">QUẠT</th>
+                                        <th ng-class="vm.manual_1?'enable':''">LÒ SƯỞI</th>
+                                    </tr>
+                                    <tbody>
+                                        <tr>
+                                            <td> <label class="switch">
+                           <input type="checkbox" ng-disabled="!vm.connected1 || vm.wait1" ng-checked="vm.manual_1"  ng-click="vm.mode1Change()">
+                            <div class="slider round"></div>
+                          </label></td>
+                                            <td> <label class="switch">
+                           <input type="checkbox" ng-disabled="!vm.connected1 || vm.wait1 || !vm.manual_1" ng-checked="vm.light_1" ng-click="vm.light1Change()">
+                            <div class="slider round"></div>
+                          </label></td>
+                                            <td>
+                                                <label class="switch">
+                                     <input ng-disabled="!vm.connected1 || vm.wait1  || !vm.manual_1" type="checkbox" ng-checked="vm.pumb_1"  ng-click="vm.pumb1Change()">
+               <div class="slider round"></div>
+                   </label>
+                                            </td>
+                                            <td><label class="switch">
+                           <input type="checkbox" ng-disabled="!vm.connected1 || vm.wait1  || !vm.manual_1" ng-checked="vm.fan_1"  ng-click="vm.fan1Change()">
+                            <div class="slider round"></div>
+                          </label></td>
+                                            <td><label class="switch">
+              <input ng-disabled="!vm.connected1 || vm.wait1  || !vm.manual_1" type="checkbox" ng-checked="vm.boiler_1"  ng-click="vm.boiler1Change()">
+                    <div class="slider round"></div>
+</label></td>
+                                        </tr>
+                                    </tbody>
+                                </thead>
+                            </table>
+                        </div>
+                        <div class="form-action">
+                            <div class="col-md-offset-3 col-md-9 ">
+
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div> {{vm.connected2?'Đã kết nối' : 'Đang kết nối'}}
+            </div>
+            <div ng-show="!vm.connected2 || vm.wait2" class="loader" aria-hidden="true"></div>
+            <br>
+            <br>
+            <br>
+            <br>
+            <strong ng-show="vm.wait2">Vui lòng chờ...</strong>
+            <br>
+            <div class="panel panel-green">
+                <div class="panel-heading">KHU VỰC 2</div>
+                <div class="panel-body pan">
+                    <form class="form-horizontal ng-pristine ng-valid form-validate">
+                        <div class="form-body pal">
+                            <table class="table table-hover table-striped table-bordered table-advanced tablesorter">
+                                <thead>
+                                    <tr>
+                                        <th>NHIỆT ĐỘ</th>
+                                        <th>ĐỘ ẨM</th>
+                                        <th>ĐỘ ẨM ĐẤT</th>
+                                    </tr>
+                                    <tbody>
+                                        <tr>
+                                            <td>{{vm.zone_2[0]}}</td>
+                                            <td>{{vm.zone_2[1]}}</td>
+                                            <td>{{vm.zone_2[2]}}</td>
+                                        </tr>
+                                    </tbody>
+                                </thead>
+                            </table>
+                            <table class="table table-hover table-striped table-bordered table-advanced tablesorter">
+                                <thead>
+                                    <tr>
+                                        <th>TỰ ĐỘNG / BẰNG TAY </th>
+                                        <th ng-class="vm.manual_2?'enable':''">ĐÈN</th>
+                                        <th ng-class="vm.manual_2?'enable':''">BƠM</th>
+                                        <th ng-class="vm.manual_2?'enable':''">QUẠT</th>
+                                        <th ng-class="vm.manual_2?'enable':''">LÒ SƯỞI</th>
+                                    </tr>
+                                    <tbody>
+                                        <tr>
+                                            <td> <label class="switch">
+                           <input type="checkbox" ng-disabled="!vm.connected2 || vm.wait2" ng-checked="vm.manual_2"  ng-click="vm.mode2Change()">
+                            <div class="slider round"></div>
+                          </label></td>
+                                            <td> <label class="switch">
+                           <input type="checkbox" ng-disabled="!vm.connected2 || vm.wait2 || !vm.manual_2" ng-checked="vm.light_2" ng-click="vm.light2Change()">
+                            <div class="slider round"></div>
+                          </label></td>
+                                            <td>
+                                                <label class="switch">
+                                     <input ng-disabled="!vm.connected2 || vm.wait2 || !vm.manual_2 " type="checkbox" ng-checked="vm.pumb_2"  ng-click="vm.pumb2Change()">
+               <div class="slider round"></div>
+                   </label>
+                                            </td>
+                                            <td><label class="switch">
+                           <input type="checkbox"  ng-disabled="!vm.connected2 || vm.wait2 || !vm.manual_2" ng-checked="vm.fan_2"  ng-click="vm.fan2Change()">
+                            <div class="slider round"></div>
+                          </label></td>
+                                            <td><label class="switch">
+              <input ng-disabled="!vm.connected2 || vm.wait2 || !vm.manual_2" type="checkbox" ng-checked="vm.boiler_2"  ng-click="vm.boiler2Change()">
+                    <div class="slider round"></div>
+</label></td>
+                                        </tr>
+                                    </tbody>
+                                </thead>
+                            </table>
+                        </div>
+                        <div class="form-action">
+                            <div class="col-md-offset-3 col-md-9 ">
+
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>

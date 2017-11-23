@@ -1,0 +1,26 @@
+.icon-spin {
+  display: inline-block;
+  -moz-animation: spin 2s infinite linear;
+  -o-animation: spin 2s infinite linear;
+  -webkit-animation: spin 2s infinite linear;
+  animation: spin 2s infinite linear;
+}
+.no-border-radius {
+  -webkit-border-radius: 0 !important;
+  -moz-border-radius: 0 !important;
+  border-radius: 0 !important;
+}
+.text-uppercase {
+  text-transform: uppercase;
+}
+.text-justify {
+  text-align: justify;
+}
+.text-line-through {
+  text-decoration: line-through;
+}
+.box-heading {
+  font-weight: bold;
+  font-family: 'Oswald';
+  margin-bottom: 15px;
+}

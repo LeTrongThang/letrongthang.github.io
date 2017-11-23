@@ -1,0 +1,31 @@
+<div id="signin-page">
+  <div class="page-form-wrapper"></div>
+  <div class="page-form">
+    <form novalidate name="formLogin" class="form" ng-submit="formLogin.$valid && vm.login()">
+      <div class="header-content">
+        <h1>ĐĂNG NHẬP</h1>
+      </div>
+      <div class="body-content">
+        <div class="form-group">
+          <div class="input-icon right"><i class="fa fa-user"></i>
+            <input type="text" placeholder="Email" name="email" class="form-control" ng-model="vm.email" required/>
+              <span class="text-danger" ng-show="formLogin.$submitted && formLogin.email.$error.required">Email là bắt buộc</span>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="input-icon right"><i class="fa fa-key"></i>
+              <input type="password" placeholder="Mật khẩu" name="password" class="form-control" ng-model="vm.password" required/>
+              <span class="text-danger" ng-show="formLogin.$submitted && formLogin.password.$error.required">Mật khẩu là bắt buộc</span>
+          </div>
+        </div>
+        <div class="form-group pull-right">
+          <button type="submit" class="btn btn-success">
+            ĐĂNG NHẬP
+            &nbsp;<i class="fa fa-chevron-circle-right"></i>
+          </button>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+    </form>
+  </div>
+</div>
