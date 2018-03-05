@@ -23,25 +23,25 @@
         client2.onMessageArrived = onMessageArrived2;
         vm.zone1Default = [
             {
-                type: "Gà",
-                highTemp: 25,
-                lowTemp: 15,
-                highHud: 80,
-                lowHud: 70
+                type: "Gà T1",
+                highTemp: 33,
+                lowTemp: 31,
+                highHud: 75,
+                lowHud: 60
             },
             {
-                type: "Heo",
-                highTemp: 20,
-                lowTemp: 15,
-                highHud: 80,
-                lowHud: 70
+                type: "Gà T2",
+                highTemp: 31,
+                lowTemp: 29,
+                highHud: 75,
+                lowHud: 60
             },
             {
-                type: "Vịt",
-                highTemp: 20,
-                lowTemp: 18,
-                highHud: 85,
-                lowHud: 75
+                type: "Gà T3",
+                highTemp: 28,
+                lowTemp: 26,
+                highHud: 75,
+                lowHud: 60
             }
         ]
         vm.zone2Default = [
@@ -49,8 +49,8 @@
                 type: "Gà",
                 highTemp: 25,
                 lowTemp: 15,
-                highHud: 80,
-                lowHud: 70
+                highHud: 75,
+                lowHud: 60
             },
             {
                 type: "Heo",
