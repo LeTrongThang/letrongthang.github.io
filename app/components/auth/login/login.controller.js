@@ -5,8 +5,8 @@ LoginController.$inject = ['$state', '$localStorage', 'authService', 'messageSho
 function LoginController($state, $localStorage, authService, messageShow, $timeout) {
 
     var vm = this;
-    vm.email = "123";
-    vm.password = "123";
+    vm.email = "";
+    vm.password = "";
     vm.login = login;
     vm.isValidUserLogin = false;
 
