@@ -77,40 +77,5 @@
                     </form>
                 </div>
             </div>
-
-            <div> {{vm.connected2?'Đã kết nối' : 'Đang kết nối'}}
-            </div>
-            <div ng-show="!vm.connected2 || vm.wait2" class="loader" aria-hidden="true"></div>
-            <br>
-            <br>
-            <br>
-            <br>
-            <strong ng-show="vm.wait2">Vui lòng chờ...</strong>
-            <br>
-            <div class="panel panel-green">
-                <div class="panel-heading">NGOÀI TRỜI</div>
-                <div class="panel-body pan">
-                    <form class="form-horizontal ng-pristine ng-valid form-validate">
-                        <div class="form-body pal">
-                            <table class="table table-hover table-striped table-bordered table-advanced tablesorter">
-                                <thead>
-                                    <tr>
-                                        <th>NHIỆT ĐỘ</th>
-                                        <th>ĐỘ ẨM</th>
-                                        <th>ĐỘ ẨM ĐẤT</th>
-                                    </tr>
-                                    <tbody>
-                                        <tr>
-                                            <td>{{vm.zone_2[0]}}</td>
-                                            <td>{{vm.zone_2[1]}}</td>
-                                            <td>{{vm.zone_2[2]}}</td>
-                                        </tr>
-                                    </tbody>
-                                </thead>
-                            </table>
-                        </div>
-                    </form>
-                </div>
-            </div>
         </div>
     </div>
