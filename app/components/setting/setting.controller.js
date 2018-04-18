@@ -9,7 +9,7 @@
         vm.connected1 = false;
         vm.wait1 = false;
         vm.listType = [];
-        var topicPublish1 = "control1";
+        var topicPublish1 = "control";
         // var client = new Paho.MQTT.Client("host", port, "client_id");
         var client = new Paho.MQTT.Client("m13.cloudmqtt.com", 37587, "web_" + parseInt(Math.random() * 100, 10));
         // set callback handlers
@@ -61,7 +61,7 @@
         function onConnect() {
             // Once a connection has been made, make a subscription and send a message.
             console.log("onConnect");
-            client.subscribe("event1");
+            client.subscribe("event");
             $timeout(function () {
                 vm.connected1 = true;
                 vm.wait1 = false;
