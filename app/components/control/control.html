@@ -11,7 +11,7 @@
         <br>
         <div>
             <div class="panel panel-green">
-                <div class="panel-heading">TRANG TRẠI</div>
+                <div class="panel-heading">TrangTrai LTT</div>
                 <div class="panel-body pan">
                     <form class="form-horizontal ng-pristine ng-valid form-validate">
                         <div class="form-body pal">
@@ -35,44 +35,43 @@
                                 <thead>
                                     <tr>
                                         <th>TỰ ĐỘNG / BẰNG TAY </th>
-                                        <th ng-class="vm.manual_1?'enable':''">ĐÈN</th>
-                                        <th ng-class="vm.manual_1?'enable':''">BƠM</th>
-                                        <th ng-class="vm.manual_1?'enable':''">QUẠT</th>
-                                        <th ng-class="vm.manual_1?'enable':''">CỬA THÔNG GIÓ</th>
+                                        <th ng-class="vm.manual_1?'enable':''">Đèn</th>
+                                        <th ng-class="vm.manual_1?'enable':''">Bơm</th>
+                                        <th ng-class="vm.manual_1?'enable':''">Quạt</th>
+                                        <th ng-class="vm.manual_1?'enable':''">Thông Gió</th>
                                     </tr>
                                     <tbody>
                                         <tr>
                                             <td>
-                                                <td>
-                                                    <label class="switch">
-                                                        <input type="checkbox" ng-disabled="!vm.connected1 || vm.wait1" ng-checked="vm.manual_1" ng-click="vm.mode1Change()">
-                                                        <div class="slider round"></div>
-                                                    </label>
-                                                </td>
-                                                <td>
-                                                    <label class="switch">
-                                                        <input type="checkbox" ng-disabled="!vm.connected1 || vm.wait1 || !vm.manual_1" ng-checked="vm.light_1" ng-click="vm.light1Change()">
-                                                        <div class="slider round"></div>
-                                                    </label>
-                                                </td>
-                                                <td>
-                                                    <label class="switch">
-                                                        <input ng-disabled="!vm.connected1 || vm.wait1  || !vm.manual_1" type="checkbox" ng-checked="vm.pumb_1" ng-click="vm.pumb1Change()">
-                                                        <div class="slider round"></div>
-                                                    </label>
-                                                </td>
-                                                <td>
-                                                    <label class="switch">
-                                                        <input type="checkbox" ng-disabled="!vm.connected1 || vm.wait1  || !vm.manual_1" ng-checked="vm.fan_1" ng-click="vm.fan1Change()">
-                                                        <div class="slider round"></div>
-                                                    </label>
-                                                </td>
-                                                <td>
-                                                    <label class="switch">
-                                                        <input ng-disabled="!vm.connected1 || vm.wait1  || !vm.manual_1" type="checkbox" ng-checked="vm.boiler_1" ng-click="vm.boiler1Change()">
-                                                        <div class="slider round"></div>
-                                                    </label>
-                                                </td>
+                                                <label class="switch">
+                                                    <input type="checkbox" ng-disabled="!vm.connected1 || vm.wait1" ng-checked="vm.manual_1" ng-click="vm.mode1Change()">
+                                                    <div class="slider round"></div>
+                                                </label>
+                                            </td>
+                                            <td>
+                                                <label class="switch">
+                                                    <input type="checkbox" ng-disabled="!vm.connected1 || vm.wait1 || !vm.manual_1" ng-checked="vm.light_1" ng-click="vm.light1Change()">
+                                                    <div class="slider round"></div>
+                                                </label>
+                                            </td>
+                                            <td>
+                                                <label class="switch">
+                                                    <input ng-disabled="!vm.connected1 || vm.wait1  || !vm.manual_1" type="checkbox" ng-checked="vm.pumb_1" ng-click="vm.pumb1Change()">
+                                                    <div class="slider round"></div>
+                                                </label>
+                                            </td>
+                                            <td>
+                                                <label class="switch">
+                                                    <input type="checkbox" ng-disabled="!vm.connected1 || vm.wait1  || !vm.manual_1" ng-checked="vm.fan_1" ng-click="vm.fan1Change()">
+                                                    <div class="slider round"></div>
+                                                </label>
+                                            </td>
+                                            <td>
+                                                <label class="switch">
+                                                    <input ng-disabled="!vm.connected1 || vm.wait1  || !vm.manual_1" type="checkbox" ng-checked="vm.boiler_1" ng-click="vm.boiler1Change()">
+                                                    <div class="slider round"></div>
+                                                </label>
+                                            </td>
                                         </tr>
                                     </tbody>
                                 </thead>
@@ -80,6 +79,7 @@
                         </div>
                         <div class="form-action">
                             <div class="col-md-offset-3 col-md-9 ">
+
                             </div>
                         </div>
                     </form>
