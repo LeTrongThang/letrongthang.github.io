@@ -6,7 +6,7 @@
     function ControlController($state, $localStorage, messageShow, $timeout, WIoT, $timeout) {
 
         var vm = this;
-        vm.manual = false;
+        vm.manual_1 = true;
         vm.zone_1 = [];
         vm.pumb_1 = false;
         vm.boiler_1 = false;
