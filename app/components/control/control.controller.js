@@ -76,16 +76,16 @@
                     if (data && data != "ESP_reconnected") {
                         vm.zone_1 = data.split(",")
                         if (vm.zone_1[3] === "on" || vm.zone_1[3] === "off") {
-                            vm.fan_1 = vm.zone_1[4] === "on" ? true : false;
+                            vm.fan_1 = vm.zone_1[3] === "on" ? true : false;
                         }
                         if (vm.zone_1[4] === "on" || vm.zone_1[4] === "off") {
-                            vm.pumb_1 = vm.zone_1[5] === "on" ? true : false;
+                            vm.pumb_1 = vm.zone_1[4] === "on" ? true : false;
                         }
                         if (vm.zone_1[2] === "on" || vm.zone_1[2] === "off") {
-                            vm.light_1 = vm.zone_1[3] === "on" ? true : false;
+                            vm.light_1 = vm.zone_1[2] === "on" ? true : false;
                         }
                         if (vm.zone_1[5] === "on" || vm.zone_1[5] === "off") {
-                            vm.boiler_1 = vm.zone_1[6] === "on" ? true : false;
+                            vm.boiler_1 = vm.zone_1[5] === "on" ? true : false;
                         }
                         if (vm.zone_1[6] == 0 || vm.zone_1[6] == 1) {
                             vm.manual_1 = vm.zone_1[6] == 1 ? true : false;
