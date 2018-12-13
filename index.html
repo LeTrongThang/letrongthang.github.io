@@ -1,95 +1,163 @@
-<!DOCTYPE html>
-<!--<html ng-app="MAdmin">-->
-<html ng-app="app">
-
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
 <head>
-	<title>HỆ THỐNG GIÁM SÁT - ĐIỀU KHIỂN TRONG HỆ THỐNG IOT NÔNG NGHIỆP</title>
-	<!-- bower:css -->
-	<link rel="stylesheet" href="assets/libs/font-awesome/css/font-awesome.css">
-	<!-- endinject -->
-	<!--Loading bootstrap css-->
-	<!--<link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Oswald:400,700,300">-->
-	<link type="text/css" rel="stylesheet" href="assets/vendors/bootstrap/css/bootstrap.min.css">
-	<!--Loading style vendors-->">
-	<link type="text/css" rel="stylesheet" href="assets/vendors/sco.message/sco.message.css">
-	<!--Loading style-->
-	<link type="text/css" rel="stylesheet" href="assets/css/themes/style1/yellow-green.css" class="default-style">
-	<!--<link type="text/css" rel="stylesheet" href="assets/css/themes/style1/orange-blue.css" id="theme-change" class="style-change color-change">-->
-	<!--<link type="text/css" rel="stylesheet" href="assets/css/style-responsive.css">-->
-	<link type="text/css" rel="stylesheet" href="assets/css/app.css">
-</head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">	
+<title>Bí mật dành cho em <?php echo $_GET['em']; ?> :-*</title>
+<link rel="stylesheet" href="css/popup.css">
+<link rel="stylesheet" href="css/styles.css">
+<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro&subset=latin,vietnamese' rel='stylesheet' type='text/css'>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.6.min.js"></script>
+<script type="text/javascript" src="js/jquery.popup.js"></script>
+<script src="js/popup.js" type="text/javascript"></script>
+<script src="js/jquery-1.js" type="text/javascript"></script>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="http://cdn.vietdesigner.net/data/codes/snow1.js"></script>
+<script type="text/javascript">
 
-<body ng-controller="AppController" ng-class="[header.menu_style, header.menu_collapse, header.header_topbar, header.effect]"
- class="animated">
-	<div class="ui-view-app" ui-view=""></div>
+$(document).ready(function () {
+
+	// if user clicked on button, the overlay layer or the dialogbox, close the dialog	
+	$('a.btn-ok, #msb-nt').click(function () {		
+		$('#dialog-overlay, #dialog-box').hide();		
+		return false;
+	});
+	
+	// if user resize the window, call the same function again
+	// to make sure the overlay fills the screen and dialogbox aligned to center	
+	$(window).resize(function () {
+		
+
+		if (!$('#dialog-box').is(':hidden')) popup();		
+	});	
+	
+	
+});
+
+function popup(message) {
+		
+	var maskHeight = $(document).height();  
+	var maskWidth = $(window).width();
+
+	var dialogTop =  (maskHeight/3) - ($('#dialog-box').height());  
+	var dialogLeft = (maskWidth/2) - ($('#dialog-box').width()/2); 
+	$('#dialog-overlay').css({height:maskHeight, width:maskWidth}).show();
+	$('#dialog-box').css({top:dialogTop, left:dialogLeft}).show();
+	
+
+	$('#dialog-message').html(message);
+			
+}
+
+window.onbeforeunload = function (event) {
+  var message = 'NHI MÀ TẮT CÁI NÀY ĐI, KHÔNG TRẢ LỜI SẼ PHẢI THEO ANH TÝ SUỐT ĐỜI ♥ =)) CÓ CHẮC TẮT KHÔNG? :3';
+  if (typeof event == 'undefined') {
+    event = window.event;
+  }
+  if (event) {
+    event.returnValue = message;
+  }
+  return message;
+}
+</script>
+		
+<script language="javascript"> 
+var kt=false
+function move()
+{
+var x = Math.random()*500
+var y = Math.random()*500
+var left=x+'px'
+var top=y+'px'
+document.getElementById('lbNo').style.left=left
+document.getElementById('lbNo').style.top=top
+}
+function dongy()
+{
+if(kt==false)
+{
+
+kt=true 
+} 
+else
+{
+}
+}
+</script>
+<script src="js/pace.min.js"></script>
+  <link href="css/dataurl.css" rel="stylesheet" />
+
+</head>	
+<body onload="popup('<p>Hãy trả lời câu hỏi này nhé.. Trả lời cho thật lòng đó nghe chưa :-*</p></br>'); on()" onunload="s()">
+<div id="bg"></div>
+<div id="myModal" class="reveal-modal large">
+    <div id="traloi">
+      <h1><center>NÓI VỚI TÝ <img src="http://vozforums.com/images/smilies/Off/angry.gif"/></center></h1></br>
+	  <p>Có phải em yêu anh vì anh quá tốt không? <img src="http://vozforums.com/images/smilies/Off/nosebleed.gif"/>  Nhập câu trả lời xuống bên dưới và bấm GỬI ĐI</br></br></p>
+      <form id="f" name="f">
+        <input id="form" name="txt" type="text" />
+
+        <div>
+          <input id="gui" onclick="Yeu();" type="button" value="Gửi đi" />
+        </div>
+      </form>
+    </div>
+
+    <div style="clear: both;"></div>
+
+    <div id="divResult" style="text-align: center"></div>
+
+    <div id="divResult2"></div>
+
+    <div id="divResult3"></div>
+<a class="close-reveal-modal">&#215;</a>
+</div>
+<script language="javascript"> 
+    $(document).ready(function() {
+        $('#msb-nt').click(function() {
+                $('.music').slideToggle("fast");
+                $('#bg').css('display','none');
+        });
+    });
+</script>
+<div id="dialog-overlay"></div>
+<div id="dialog-box">
+	<div class="dialog-content">
+		<div id="dialog-message"></div>
+		<div id="msb-nt">
+		<a href="#">Ô tê :3</a>
+		</div>
+	</div>
+</div>
+		
+<div class="msg">
+			
+<h1> <?php if($_GET['em']==null) echo 'EM'; else echo $_GET['em']; ?> NHI CÓ YÊU TÝ KHÔNG ?</h1>
+			
+<h2><?php if($_GET['em']==null) echo 'EM'; else echo $_GET['em']; ?> MÀ TẮT CÁI NÀY ĐI, KHÔNG TRẢ LỜI</br>
+LÀ NHI YÊU CMN TÝ RỒI ♥ =))</h2>
+
+		
+</div>
+		
+<center>
+<div id="co"> 
+<a href="#" data-reveal-id="myModal">CÓ! <?php if($_GET['em']==null) echo 'EM'; else echo $_GET['em']; ?> YÊU TÝ</a>
+</div> 
+
+<div id="lbNo" style="position:absolute; left: 700px; top: 300px;"> 
+<input type="button" value="KHÔNG BAO GIỜ" style="cursor:pointer;" onMouseMove="move()" > 
+</div>
+</center> 
+
+<div class="music" style="display: none;">
+<object width="1" height="1">  <param name="movie" value="http://www.nhaccuatui.com/m/UoqC0m8Rofjb" />  <param name="quality" value="high" />  <param name="wmode" value="transparent" />  <param name="allowscriptaccess" value="always" /> <param name="allowfullscreen" value="true"/> <param name="flashvars" value="autostart=true" />  <embed src="http://www.nhaccuatui.com/m/o7HA9CnWPy1W" flashvars="target=blank&autostart=true" allowscriptaccess="always" allowfullscreen="true" quality="high" wmode="transparent" type="application/x-shockwave-flash" width="1" height="1"></embed></object>
+</div>
+<script type="text/javascript">
+   $(document).ready(function(){
+      $(document).bind("contextmenu",function(e){
+        return false;
+      });
+    });
+ </script>	
 </body>
-<!-- bower:js -->
-<script src="assets/libs/jquery/dist/jquery.js"></script>
-<script src="assets/libs/angular/angular.js"></script>
-<script src="assets/libs/ngstorage/ngStorage.js"></script>
-<script src="assets/libs/angular-ui-router/release/angular-ui-router.js"></script>
-<script src="assets/libs/angular-bootstrap/ui-bootstrap-tpls.js"></script>
-<script src="assets/libs/angular-breadcrumb/release/angular-breadcrumb.js"></script>
-<script src="assets/libs/lodash/lodash.js"></script>
-<script src="assets/libs/restangular/dist/restangular.js"></script>
-<script src="assets/libs/moment/moment.js"></script>
-<!-- endinject -->
-<script src="assets/libs/socket-io-client/socket.io.js"></script>
-<script src="assets/vendors/jquery-ui.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.1/mqttws31.js" type="text/javascript"></script>
-<!-- Loading global plugin-->
-<script src="assets/vendors/bootstrap/js/bootstrap.min.js"></script>
-<script src="assets/vendors/ibmiotf/dist/iotf-client-bundle.min.js"></script>
-<script src="assets/vendors/sco.message/sco.message.js"></script>
-
-
-<!-- inject:js -->
-<script src="app/shared/appDirectives/appDirectives.module.js"></script>
-<script src="app/shared/appDirectives/table-pagination/table-pagination.directive.js"></script>
-<script src="app/shared/appDirectives/table-search/table-search.directive.js"></script>
-<script src="app/shared/appDirectives/table-filter/table-filter.directive.js"></script>
-<script src="app/shared/appDirectives/ngEnter/ngEnter.directives.js"></script>
-<script src="app/shared/appDirectives/ngConfirm/ngConfirm.directives.js"></script>
-<script src="app/shared/appDirectives/iCheck/iCheck.directive.js"></script>
-<script src="app/shared/appDirectives/dropdown-address/dropdown-address.module.js"></script>
-<script src="app/shared/appDirectives/dropdown-address/dropdown-address.directive.js"></script>
-<script src="app/shared/trans/translate.config.js"></script>
-<script src="app/shared/filters/filters.module.js"></script>
-<script src="app/shared/filters/status-name.filter.js"></script>
-<script src="app/shared/filters/price.filter.js"></script>
-<script src="app/shared/filters/payment-status.filter.js"></script>
-<script src="app/shared/filters/order-extras.filter.js"></script>
-<script src="app/shared/filters/date-time.filter.js"></script>
-<script src="app/shared/services/services.module.js"></script>
-<script src="app/shared/services/messageShow.service.js"></script>
-<script src="app/shared/services/httpInterceptor.service.js"></script>
-<script src="app/shared/services/auth.service.js"></script>
-<script src="app/shared/themeDirectives/themeDirectives.module.js"></script>
-<script src="app/shared/themeDirectives/ngMenu.js"></script>
-<script src="app/components/error/error-500/error-500.module.js"></script>
-<script src="app/components/error/error-500/error-500.route.js"></script>
-<script src="app/components/main/layout/layout.module.js"></script>
-<script src="app/components/main/layout/layout.route.js"></script>
-<script src="app/components/main/layout/layout.controller.js"></script>
-<script src="app/components/main/layout/app.controller.js"></script>
-<script src="app/components/main/dashboard/dashboard.module.js"></script>
-<script src="app/components/main/dashboard/dashboard.route.js"></script>
-<script src="app/components/main/breadcrumb/breadcrumb.module.js"></script>
-<script src="app/components/main/breadcrumb/breadcrumb.config.js"></script>
-<script src="app/components/auth/login/login.module.js"></script>
-<script src="app/components/auth/login/login.route.js"></script>
-<script src="app/components/auth/login/login.controller.js"></script>
-<script src="app/components/error/error.module.js"></script>
-<script src="app/components/setting/setting.module.js"></script>
-<script src="app/components/setting/setting.routes.js"></script>
-<script src="app/components/setting/setting.controller.js"></script>
-<script src="app/components/main/main.module.js"></script>
-<script src="app/components/control/control.module.js"></script>
-<script src="app/components/control/control.routes.js"></script>
-<script src="app/components/control/control.controller.js"></script>
-<script src="app/components/auth/auth.module.js"></script>
-<script src="app/components/components.module.js"></script>
-<!-- endinject -->
-<script src="app.js"></script>
-
 </html>
